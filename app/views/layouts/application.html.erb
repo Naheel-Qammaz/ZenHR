@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <style>
+  .flash {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  color:black;
+}
+
+
+
+
+
+/* Optional: Add additional styles for general flash messages */
+.flash {
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-size: 16px;
+}
+
+  </style>
+  <body>
+  
+    
+    
+    <%= yield %>
+<% flash.each do |key, message| %>
+    <div class="flash <%= key %>">
+      <%= message %>
+    </div>
+  <% end %>  </body>
+
+
+
+
+
+
+
+   
+    
+ 
+</html>
